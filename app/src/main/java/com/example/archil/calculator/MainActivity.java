@@ -1,33 +1,24 @@
-
-
-
-
 package com.example.archil.calculator;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+ public class MainActivity extends AppCompatActivity implements  View.OnClickListener {
 
-        public class MainActivity extends AppCompatActivity implements  View.OnClickListener {
-
-
-            private Button seven, eight, nine, plus, minus, equal, div, mul, clear, dot, one, two, three, four, five, six, sqrt, allclear, zero;
+            private Button seven, eight, nine, plus, minus, equal, div, mul, clear, dot, one, two, three, four, five, six, sqrt, allclear, zero,plusminus;
             private Character signOperator;
             private float numberBefore = Float.NaN;
             EditText editText;
             String pro;
-
 
             @Override
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
 
-
-
+                plusminus= findViewById(R.id.plusminus);
                 allclear = findViewById(R.id.allclear);
                 sqrt = findViewById(R.id.sqrt);
                 editText = findViewById(R.id.editText);
@@ -48,9 +39,9 @@ import android.widget.EditText;
                 mul = findViewById(R.id.multiply);
                 clear = findViewById(R.id.clear);
                 dot = findViewById(R.id.dot);
-
                 editText.setText("");
 
+                plusminus.setOnClickListener(this);
                 allclear.setOnClickListener(this);
                 sqrt.setOnClickListener(this);
                 seven.setOnClickListener(this);
@@ -72,14 +63,6 @@ import android.widget.EditText;
                 div.setOnClickListener(this);
                 dot.setOnClickListener(this);
                 editText.setOnClickListener(this);
-
-        /*clear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv_process.setText("");
-                tv_result.setText("");
-            }
-        });*/
             }
 
             private void setNumberBefore(Character sign) {
@@ -146,6 +129,15 @@ import android.widget.EditText;
                         finalResult = (float)Math.sqrt(numberBefore);
                     }
 
+                    if (signOperator == '±' ) {
+                        numberAfter = Float.parseFloat(editText.getText().toString());
+
+                        if(numberAfter!=0)
+                            finalResult = numberAfter * (-1);
+                        else
+                            finalResult = numberAfter;
+                    }
+
                     if (signOperator =='='){
                         numberAfter = Float.parseFloat(editText.getText().toString());
                         switch (pro){
@@ -168,9 +160,16 @@ import android.widget.EditText;
                             case "√":
                                 finalResult = (float)Math.sqrt(numberAfter);
                                 break;
+                            case "±":
+                                numberAfter = Float.parseFloat(editText.getText().toString());
+
+                                if(numberAfter!=0)
+                                    finalResult =numberAfter * (-1);
+                                else
+                                    finalResult = numberAfter;
                         }
                     }
-                    if (finalResult == 0 || Float.isInfinite(finalResult) || Float.isNaN(finalResult)) {
+                    if (Float.isInfinite(finalResult) || Float.isNaN(finalResult)) {
                         editText.setText("0");
                     } else {
                         editText.setText(String.valueOf(finalResult));
@@ -219,6 +218,13 @@ import android.widget.EditText;
                         pro="√";
                         break;
 
+                    case R.id.plusminus:
+                        setNumberBefore('±');
+                        pro="±";
+                        break;
+
+
+
                     case R.id.clear:
                         if(!editText.getText().toString().equals("")) {
                             String value = editText.getText().toString();
@@ -235,8 +241,6 @@ import android.widget.EditText;
                         getKeyboard(defaultSign);
                         break;
                 }
-
-
             }
         }
 
