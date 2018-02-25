@@ -132,10 +132,10 @@ import android.widget.EditText;
                     if (signOperator == '±' ) {
                         numberAfter = Float.parseFloat(editText.getText().toString());
 
-                        if(numberAfter!=0)
-                            finalResult = numberAfter * (-1);
+                        if(numberAfter >= 0)
+                            finalResult = numberBefore * (-1);
                         else
-                            finalResult = numberAfter;
+                            finalResult = numberBefore;
                     }
 
                     if (signOperator =='='){
@@ -163,7 +163,7 @@ import android.widget.EditText;
                             case "±":
                                 numberAfter = Float.parseFloat(editText.getText().toString());
 
-                                if(numberAfter!=0)
+                                if(numberAfter >= 0)
                                     finalResult =numberAfter * (-1);
                                 else
                                     finalResult = numberAfter;
