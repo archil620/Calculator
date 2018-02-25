@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/relativeLayout">
+
+        <!--<EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editText"
+            android:inputType="number"
+            android:maxLength="12"
+            android:textDirection="rtl"
+            android:fontFamily="sans-serif"
+            android:background="#f3f8ff"
+            android:textSize="70sp"
+            android:textColor="#737373"/>-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="@string/textResult"
+            android:id="@+id/editText"
+            android:inputType="number"
+            android:paddingEnd="40dp"
+            android:paddingStart="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="textEnd"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:maxLength="12"
+            android:fontFamily="sans-serif"
+            android:background="#f3f8ff"
+            android:textSize="70sp"
+            android:textColor="#737373" />
+
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/tableLayout"
+        android:layout_toStartOf="@+id/LinearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/allclear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorlinear"
+                android:fontFamily="sans-serif"
+                android:text="@string/ac"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/plusminus"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorlinear"
+                android:text="@string/ssign"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/sqrt"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorlinear"
+                android:text="@string/sqrrt"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                tools:ignore="HardcodedText" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:fontFamily="sans-serif"
+                android:text="@string/_7"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/eight"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_8"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/nine"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_9"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/four"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_4"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/five"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_5"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/six"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_6"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/one"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_1"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/two"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_2"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/three"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_3"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/clear"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/clear"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/zero"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/_0"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/dot"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundButton"
+                android:text="@string/dot"
+                android:textColor="@color/textclr"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/LinearLayout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:id="@+id/divide"
+            android:text="@string/divide"
+            android:textColor="@color/textclr"
+            android:fontFamily="sans-serif"
+            android:background="@color/colorlinear"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:id="@+id/multiply"
+            android:text="@string/_multiply"
+            android:textColor="@color/textclr"
+            android:fontFamily="sans-serif"
+            android:background="@color/colorlinear"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:id="@+id/minus"
+            android:text="@string/minus"
+            android:textColor="@color/textclr"
+            android:fontFamily="sans-serif"
+            android:background="@color/colorlinear"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:id="@+id/plus"
+            android:text="@string/plus"
+            android:textColor="@color/textclr"
+            android:fontFamily="sans-serif"
+            android:background="@color/colorlinear"
+            android:textSize="16sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:id="@+id/equals"
+            android:text="@string/equal"
+            android:textColor="@color/textclr"
+            android:fontFamily="sans-serif"
+            android:background="@color/colorlinear"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
