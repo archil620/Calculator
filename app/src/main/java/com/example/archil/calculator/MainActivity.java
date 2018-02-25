@@ -154,8 +154,8 @@ import android.widget.EditText;
                                 editText.setText(finalResult+"");
                                 break;
                             case "÷":
-                                finalResult = numberBefore / numberAfter;
-                                editText.setText(finalResult+"");
+                                    finalResult = numberBefore / numberAfter;
+                                    editText.setText(finalResult + "");
                                 break;
                             case "√":
                                 finalResult = (float)Math.sqrt(numberAfter);
@@ -175,7 +175,6 @@ import android.widget.EditText;
                         editText.setText(String.valueOf(finalResult));
                     }
 
-                    editText.setText(String.valueOf(finalResult));
                 }
             }
 
