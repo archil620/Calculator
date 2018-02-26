@@ -10,10 +10,10 @@
 
     <color name="colorBackgroundButton">#F4F5F9</color>
 
-    <color name="colorlinear">#E8E9EE</color>
+    <color name="colorlinear">#E4E5EA</color>
 
-    <color name="textclr">#FF3F74</color>
+    <color name="textclr">#245BDA</color>
 
-    <color name="opcolor">#090F27</color>
+    <color name="opcolor">#FFFFFF</color>
 
 </resources>

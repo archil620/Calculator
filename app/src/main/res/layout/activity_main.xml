@@ -37,9 +37,9 @@
             android:focusableInTouchMode="false"
             android:maxLength="12"
             android:fontFamily="sans-serif"
-            android:background="#f3f8ff"
+            android:background="#FFFFFF"
             android:textSize="70sp"
-            android:textColor="#737373" />
+            android:textColor="#245BDA" />
 
     </RelativeLayout>
 
@@ -220,14 +220,14 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/clear"
+                android:id="@+id/dot"
                 android:fontFamily="sans-serif"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorBackgroundButton"
-                android:text="@string/clear"
+                android:text="@string/dot"
                 android:textColor="@color/textclr"
-                android:textSize="16sp"
+                android:textSize="30sp"
                 android:layout_weight="1"/>
 
             <Button
@@ -242,12 +242,12 @@
                 android:layout_weight="1"/>
 
             <Button
-                android:id="@+id/dot"
+                android:id="@+id/clear"
                 android:fontFamily="sans-serif"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorBackgroundButton"
-                android:text="@string/dot"
+                android:text="@string/clear"
                 android:textColor="@color/textclr"
                 android:textSize="16sp"
                 android:layout_weight="1"/>
