@@ -38,7 +38,7 @@
             android:maxLength="12"
             android:fontFamily="sans-serif"
             android:background="#FFFFFF"
-            android:textSize="70sp"
+            android:textSize="50sp"
             android:textColor="#245BDA" />
 
     </RelativeLayout>

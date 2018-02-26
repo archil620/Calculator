@@ -49,7 +49,7 @@ import android.widget.EditText;
                //Initial screen declaration
                 editText.setText("");
 
-                //Implementing onclicklisteners method to all buttons.
+                //Implementing onClickListeners method to all buttons.
                 allclear.setOnClickListener(this);
                 editText.setOnClickListener(this);
                 clear.setOnClickListener(this);
